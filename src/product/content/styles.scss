@@ -1,0 +1,62 @@
+@import '../../styles/settings/colors';
+@import '../../styles/settings/typography';
+@import '../../styles/mixins/responsive';
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+
+  @include respond-from(md) {
+    flex-direction: row;
+  }
+}
+
+.img {
+  flex: 0 0 270px;
+  height: 270px;
+  text-align: center;
+}
+
+.details {
+  flex: 1 1 auto;
+  margin-top: 20px;
+
+  @include respond-from(md) {
+    margin-top: 0;
+    margin-left: 50px;
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: $font-stack-title;
+  font-size: $font-size-large-title;
+
+  @include respond-from(md) {
+    text-align: left;
+  }
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond-from(md) {
+    justify-content: flex-start;
+  }
+}
+
+.buy {
+  flex: 0 0 auto;
+}
+
+.price {
+  flex: 0 0 auto;
+  margin-left: 20px;
+  color: $color-accent;
+  font-size: $font-size-title;
+  font-weight: 900;
+}

@@ -1,0 +1,16 @@
+{
+  "products": [
+    { "id": 1, "title": "Apple", "price": 1.3, "img": "/img/apple.jpg" },
+    { "id": 2, "title": "Banana", "price": 1.4, "img": "/img/banana.jpg" },
+    { "id": 3, "title": "Carrot", "price": 2.1, "img": "/img/carrot.jpg" },
+    { "id": 4, "title": "Coconut", "price": 3.4, "img": "/img/coconut.jpg" },
+    { "id": 5, "title": "Cucumber", "price": 1.7, "img": "/img/cucumber.jpg" },
+    { "id": 6, "title": "Grapes Black", "price": 0.7, "img": "/img/grapes_black.jpg" },
+    { "id": 7, "title": "Grapes Green", "price": 1.2, "img": "/img/grapes_green.jpg" },
+    { "id": 8, "title": "Onion", "price": 1.7, "img": "/img/onion.jpg" },
+    { "id": 9, "title": "Orange", "price": 0.9, "img": "/img/orange.jpg" },
+    { "id": 10, "title": "Potato", "price": 2.0, "img": "/img/potato.jpg" },
+    { "id": 11, "title": "Tomato", "price": 2.2, "img": "/img/tomato.jpg" },
+    { "id": 12, "title": "Watermelon", "price": 1.5, "img": "/img/watermelon.jpg" }
+  ]
+}

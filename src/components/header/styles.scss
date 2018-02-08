@@ -1,0 +1,57 @@
+@import '../../styles/settings/colors';
+@import '../../styles/settings/typography';
+
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px $color-accent;
+  background-color: $color-primary;
+  padding: 0 20px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.user {
+  flex: 0 0 auto;
+}
+
+.cart {
+  position: relative;
+  flex: 0 0 auto;
+  line-height: 1;
+  color: $color-white;
+}
+
+.icon {
+  composes: material-icons from global;
+
+  position: relative;
+  top: -5px;
+  color: $color-white;
+  font-size: 32px;
+}
+
+.quantity {
+  position: absolute;
+  top: -5px;
+  right: -15px;
+  border-radius: 50%;
+  background-color: $color-accent;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  font-size: $font-size-small;
+}
+
+.price {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  font-size: $font-size-small;
+}

@@ -1,0 +1,84 @@
+@import '../../styles/settings/colors';
+@import '../../styles/settings/typography';
+@import '../../styles/mixins/animation';
+@import '../../styles/mixins/responsive';
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include respond-from(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.item {
+  @include transition(border-color);
+
+  display: block;
+  flex: 0 0 auto;
+  margin-bottom: 15px;
+  border-top: 1px solid $color-primary;
+  border-bottom: 1px solid $color-primary;
+  padding: 15px;
+  width: 100%;
+  font-weight: 400;
+  box-sizing: border-box;
+
+  @include respond-from(md) {
+    margin: 15px;
+    border-right: 1px solid $color-primary;
+    border-left: 1px solid $color-primary;
+    width: 300px;
+  }
+
+  &:hover {
+    border-color: $color-accent;
+  }
+}
+
+$img-height: 270px;
+
+.img {
+  margin-bottom: 20px;
+  width: 100%;
+  height: $img-height;
+  text-align: center;
+  line-height: $img-height;
+}
+
+img {
+  max-width: $img-height;
+  max-height: $img-height;
+}
+
+.title {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-text;
+  font-family: $font-stack-title;
+  font-size: $font-size-small-title;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buy {
+  flex: 0 0 auto;
+}
+
+
+.price {
+  flex: 0 0 auto;
+  color: $color-accent;
+  font-size: $font-size-title;
+  font-weight: 900;
+}

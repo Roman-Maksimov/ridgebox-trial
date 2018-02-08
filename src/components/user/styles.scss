@@ -1,0 +1,68 @@
+@import '../../styles/settings/colors';
+@import '../../styles/settings/typography';
+@import '../../styles/mixins/animation';
+
+.auth {
+  composes: fb-login-button from global;
+}
+
+.user {
+  position: relative;
+}
+
+.avatar {
+  display: inline-block;
+  margin-right: 5px;
+  max-width: 50px;
+  max-height: 50px;
+  vertical-align: middle;
+}
+
+.data {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.name {
+  white-space: nowrap;
+  color: $color-white;
+  font-size: $font-size-small;
+}
+
+.button {
+  @include transition(background-color, color);
+
+  border: 0;
+  background-color: $color-facebook;
+  cursor: pointer;
+  padding: 0 5px 0 0;
+  height: 20px;
+  line-height: 20px;
+  color: $color-white;
+  font-size: $font-size-small;
+
+  &::before {
+    @include transition(background-color, color);
+
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+    background-color: $color-white;
+    width: 20px;
+    height: 20px;
+    vertical-align: baseline;
+    color: $color-facebook;
+    font-weight: 900;
+    content: 'f';
+  }
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-facebook;
+
+    &::before {
+      background-color: $color-facebook;
+      color: $color-white;
+    }
+  }
+}

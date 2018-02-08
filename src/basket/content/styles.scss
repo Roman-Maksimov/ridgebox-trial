@@ -1,0 +1,68 @@
+@import '../../styles/settings/colors';
+@import '../../styles/settings/typography';
+@import '../../styles/mixins/responsive';
+
+.basket {
+  width: 100%;
+
+  th,
+  td {
+    padding: 5px;
+
+    @include respond-from(md) {
+      padding: 10px;
+    }
+  }
+
+  th {
+    background-color: $color-primary;
+    text-align: left;
+    color: $color-white;
+    font-family: $font-stack-title;
+    font-size: $font-size-small;
+
+    @include respond-from(md) {
+      font-size: $font-size-small-title;
+    }
+  }
+
+  td {
+    border-bottom: 1px solid $color-border;
+  }
+}
+
+tfoot {
+  font-weight: 900;
+
+  tr td:first-child {
+    text-align: right;
+  }
+}
+
+.empty {
+  text-align: center;
+  color: $color-accent;
+}
+
+$img-width-sm: 60px;
+$img-width-md: 100px;
+
+.img {
+  width: $img-width-sm;
+
+  @include respond-from(md) {
+    width: $img-width-md;
+  }
+
+  img {
+    max-width: $img-width-sm;
+
+    @include respond-from(md) {
+      max-width: $img-width-md;
+    }
+  }
+}
+
+.title {
+  width: 100%;
+}

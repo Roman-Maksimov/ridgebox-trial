@@ -1,0 +1,11 @@
+@import '../styles/base';
+@import '../styles/mixins/responsive';
+
+.root {
+  margin-top: 50px;
+  padding: 10px 0;
+
+  @include respond-from(md) {
+    padding: 20px;
+  }
+}

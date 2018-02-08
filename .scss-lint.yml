@@ -1,0 +1,18 @@
+scss_files: 'src/**/*.scss'
+exclude: 'src/styles/vendor/*.scss'
+
+linters:
+  PropertySortOrder:
+    order: concentric
+    ignore_unspecified: true
+  SelectorFormat:
+    convention: ^[a-zA-Z0-9\-_]+$
+  PropertySpelling:
+    extra_properties:
+      - composes
+  DuplicateProperty:
+    ignore_consecutive:
+      - composes
+  QualifyingElement:
+    exclude:
+      - src/styles/_base.scss

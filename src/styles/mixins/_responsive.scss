@@ -1,0 +1,33 @@
+@import '../settings/breakpoints';
+
+// respond-from targets size starting from given size
+// e.g. respond-from(md) will target both md and lg sizes
+@mixin respond-from($size) {
+  @if $size == md {
+    @media (min-width: $screen-md) { @content; }
+  } @else if $size == lg {
+    @media (min-width: $screen-lg) { @content; }
+  }
+}
+
+// respond-only-for targets only the given size class
+// e.g. respond-from(md) will target only md sizes
+@mixin respond-only-for($size) {
+  @if $size == sm {
+    @media (max-width: ($screen-md - 1)) { @content; }
+  } @else if $size == md {
+    @media (min-width: $screen-md) and (max-width: ($screen-lg - 1)) { @content; }
+  } @else if $size == lg {
+    @media (min-width: $screen-lg) { @content; }
+  }
+}
+
+@mixin respond-height($size: null) {
+  @if $size == md {
+    @media (min-width: $screen-md) and (min-height: $screen-height-md) { @content; }
+  } @else if $size == lg {
+    @media (min-width: $screen-lg) and (min-height: $screen-height-md) { @content; }
+  } @else {
+    @media (min-height: $screen-height-md) { @content; }
+  }
+}

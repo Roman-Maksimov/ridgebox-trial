@@ -1,0 +1,48 @@
+@import 'settings/typography';
+@import 'settings/colors';
+@import 'mixins/animation';
+
+// sensible box sizing
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+// always have full viewport
+html {
+  height: 100%;
+}
+
+
+// base styling
+body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-height: 100%;
+  // scss-lint:disable DuplicateProperty
+  min-height: 100vh;
+  // scss-lint:enable DuplicateProperty
+  color: $color-text;
+  font-family: $font-stack;
+  font-size: $font-size;
+  font-weight: $font-weight-regular;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  @include transition(color);
+
+  text-decoration: none;
+  color: $color-accent;
+
+  &:hover {
+    color: $color-accent-light;
+  }
+
+  &:active {
+    color: $color-accent-dark;
+  }
+}

@@ -1,0 +1,18 @@
+# ignore platform files
+.DS_Store
+.idea
+.env
+
+# ignore node and npm things
+npm-debug.log
+yarn-error.log
+/node_modules
+package-lock.json
+
+# ignore the istanbul coverage report
+/coverage
+
+# ignore local assets they are regenerated on deployment
+/public/
+
+webpack-assets.json

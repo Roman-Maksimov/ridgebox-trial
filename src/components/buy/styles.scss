@@ -1,0 +1,67 @@
+@import '../../styles/settings/colors';
+@import '../../styles/mixins/animation';
+
+.buy {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 154px;
+  height: 30px;
+}
+
+.button {
+  @include transition(background-color);
+
+  flex: 0 0 30px;
+  background-color: $color-primary;
+  cursor: pointer;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: $color-white;
+
+  &:hover {
+    background-color: $color-accent;
+  }
+
+  &:active {
+    background-color: $color-accent-dark;
+  }
+}
+
+.input {
+  @include transition(border-color);
+
+  outline: none;
+  border: 1px solid $color-primary;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  box-sizing: border-box;
+
+  &:focus {
+    border-color: $color-accent;
+  }
+
+  &:active {
+    border-color: $color-accent-dark;
+  }
+}
+
+.cart {
+  @include transition(color);
+
+  composes: material-icons from global;
+
+  margin-left: 10px;
+  cursor: pointer;
+  color: $color-primary;
+
+  &:hover {
+    color: $color-accent;
+  }
+
+  &:active {
+    color: $color-accent-dark;
+  }
+}
