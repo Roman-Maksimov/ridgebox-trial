@@ -4,7 +4,7 @@ import { userFBInitialized, userSet } from 'src/actions';
 import styles from './styles.scss';
 
 const FB_APP_ID = '1411966735597510';
-const FB_VERSION = 'v2.12';
+const FB_VERSION = 'v3.0';
 
 const connectFacebook = () => {
   const id = 'facebook-jssdk';
@@ -58,7 +58,8 @@ class User extends PureComponent {
     window.FB.getLoginStatus(response => {
       if (response.status === 'connected') {
         window.FB.api('/me', me => {
-          window.FB.api(`/${response.authResponse.userID}/picture`, picture => {
+          onSet({ ...me });
+          window.FB.api(`/${response.authResponse.userID}/picture?redirect=false`, picture => {
             onSet({ ...me, avatar: picture.data.url });
           });
         });
